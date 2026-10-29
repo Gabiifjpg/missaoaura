@@ -1,0 +1,246 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    background-image: radial-gradient(circle at center, #1f2833 0%, #0b0c10 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(11, 12, 16, 0.85);
+    border: 2px solid #bf47ff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 750px;
+    box-shadow: 0 0 20px rgba(151, 39, 211, 0.2);
+}
+
+h1 {
+    color: #bf47ff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(121, 23, 186, 0.5);
+}
+
+.subtitle {
+    text-align: center;
+    color: #bf47ff;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #f58300;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #1f2833;
+    border: 1px solid #9200e0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    box-shadow: 0 0 8px #9200e0;
+}
+
+.question-box {
+    background-color: rgba(31, 40, 51, 0.5);
+    border-left: 4px solid #9200e0;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.question-text {
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.question-box label {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    color: #c5c6c7;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.question-box label:last-child {
+    margin-bottom: 0;
+}
+
+.question-box input[type="radio"] {
+    margin-right: 10px;
+    accent-color:#e6781e;
+    transform: scale(1.1);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#btn-descobrir {
+    background-color: #9200e0;
+    color: #0b0c10;
+    box-shadow: 0 4px 15px rgba(187, 0, 255, 0.4);
+}
+
+#btn-descobrir:hover {
+    background-color: #9200e0;
+    box-shadow: 0 4px 20px rgba(187, 0, 255, 0.4);
+}
+
+#btn-refazer {
+    background-color: #1f2833;
+    color: #9200e0;;
+    border: 1px solid #9200e0;
+    margin-top: 20px;
+}
+
+#btn-refazer:hover {
+    background-color: #9200e0;
+    color: #0b0c10;
+}
+
+.result-container {
+    background-color: #502880;
+    border: 2px dashed #9200e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.result-container h2 {
+    color: #9200e0;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.result-content p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.result-content strong {
+    color: #66fcf1;
+}
+
+.recommendation {
+    border-top: 1px solid rgba(151, 39, 211, 0.2);
+    padding-top: 10px;
+    margin-top: 15px;
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #9200e0;
+    box-shadow: 0 0 15px rgba(151, 39, 211, 0.2);
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(151, 39, 211, 0.2);
+    letter-spacing: 1px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    input[type="text"], input[type="date"], button {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+
+    .question-box {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .question-text {
+        font-size: 0.95rem;
+    }
+
+    .question-box label {
+        font-size: 0.85rem;
+    }
+
+    .result-content p {
+        font-size: 0.9rem;
+    }
+}

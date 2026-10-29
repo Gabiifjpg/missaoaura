@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão Aura</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Missão Aura - Ano 2089</h1>
+        <p class="subtitle">Descubra seu perfil na tripulação de exploração espacial</p>
+
+<! Formulário de Inscrição e Perguntas >
+  <form id="quiz-form">
+  <div class="form-group">
+    
+    <label for="nome">Nome do Tripulante:</label>
+    <input type="text" id="nome" required placeholder="Digite seu nome completo">
+  </div>
+            
+  <div class="form-group">
+    <label for="data-nascimento">Data de Nascimento:</label>
+    <input type="date" id="data-nascimento" required>
+  </div>
+
+<! Pergunta 1 >
+  <div class="question-box">
+    <p class="question-text">1. Qual atividade mais desperta seu interest em uma base espacial?</p>
+    <label><input type="radio" name="p1" value="construcao" required> Consertar sistemas analógicos e construir ferramentas.</label>
+   <label><input type="radio" name="p1" value="investigacao"> Analisar amostras de solo alienígena no laboratório.</label>
+   <label><input type="radio" name="p1" value="exploracao"> Pilotar um rover e mapear cavernas desconhecidas.</label>
+   <label><input type="radio" name="p1" value="planejamento"> Organizar os suprimentos e traçar as rotas mais seguras.</label>
+            </div>
+
+<! Pergunta 2 >
+  <div class="question-box">
+  <p class="question-text">2. Diante de um mau funcionamento crítico no oxigênio, o que você faz?</p>
+     <label><input type="radio" name="p2" value="construcao" required> Desmonto o painel físico e acho uma solução prática imediata.</label>
+     <label><input type="radio" name="p2" value="investigacao"> Investigo o histórico de dados para entender o motivo da falha.</label>
+     <label><input type="radio" name="p2" value="exploracao"> Procuro rotas alternativas de ar ou saídas de emergência manuais.</label>
+     <label><input type="radio" name="p2" value="planejamento"> Coordeno a equipe e delego quem faz o quê para resolver rápido.</label>
+            </div>
+
+<! Pergunta 3 >
+ <div class="question-box">
+      <p class="question-text">3. O que você espera encontrar nesse planeta desconhecido?</p>
+      <label><input type="radio" name="p3" value="construcao" required> Minerais raros para criar novas tecnologias e infraestruturas.</label>
+      <label><input type="radio" name="p3" value="investigacao"> Novas formas de vida microbiana e respostas científicas.</label>
+      <label><input type="radio" name="p3" value="exploracao"> Paisagens inéditas, biomas exóticos e o inesperado.</label>
+      <label><input type="radio" name="p3" value="planejamento"> Condições perfeitas para estabelecer uma colônia duradoura.</label>
+            </div>
+
+<! Pergunta 4 >
+ <div class="question-box">
+     <p class="question-text">4. Qual é o seu maior ponto forte em um ambiente de alta pressão?</p>
+     <label><input type="radio" name="p4" value="construcao" required> Minha habilidade de transformar problemas em soluções palpáveis.</label>
+    <label><input type="radio" name="p4" value="investigacao"> Minha paciência para analisar evidências sem tirar conclusões precipitadas.</label>
+    <label><input type="radio" name="p4" value="exploracao"> Minha facilidade em me adaptar a situações totalmente novas.</label>
+    <label><input type="radio" name="p4" value="planejamento"> Minha capacidade de manter a calma e decidir os próximos passos.</label>
+            </div>
+
+  <button type="submit" id="btn-descobrir">Descobrir o Perfil</button>
+        </form>
+
+<!-- Área de Resultado (Oculta por padrão) -->
+  <div id="result-box" class="result-container hidden">
+     <h2>Resultado do Escaneamento</h2>
+  <div class="result-content">
+    <p><strong>Identificação:</strong> <span id="res-nome"></span> (<span id="res-idade"></span> anos)</p>
+    <p><strong>Perfil Identificado:</strong> <span id="res-perfil"></span></p>
+    <p><strong>Categoria:</strong> <span id="res-categoria"></span></p>
+    <p><strong>Descrição:</strong> <span id="res-descricao"></span></p>
+    <p class="recommendation"><strong>Recomendação para a Missão:</strong> <span id="res-recomendacao"></span></p>
+  <div class="profile-image-container">
+      <img id="res-imagem" src="" alt="Imagem do Perfil Espacial">
+  </div>
+ </div>
+     <button id="btn-refazer">refaça</button>
+</div>
+
+   <footer>
+   <p>aura67</p>
+   </footer>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
